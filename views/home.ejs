@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+
+<div class="card shadow border p-3 m-3" style="width: 70%;">
+    <h1>List Of All Registered Users</h1><hr>
+    <% users.forEach(function(user){ %>
+        <p>Username:- <%= user.db_username %> </p>
+        <p>Useremail:- <%= user.db_useremail %> </p>
+        <p>Age:- <%= user.db_age %> </p>
+        <p>Gender:- <%= user.db_gender %> </p>
+        <p>Phone Number:- <%= user.db_phone %> </p> 
+        <hr>
+    <% }); %>
+    <button class="btn btn-primary"><a href="/register" class="text-white text-decoration-none">Register User</a></button>
+</div>
+
+<%- include("partials/footer") -%>
